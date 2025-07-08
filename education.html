@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg shadow-sm mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-person-circle me-2"></i>Syahira's Resume
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-person-lines-fill me-1"></i>About</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html"><i class="bi bi-briefcase me-1"></i>Experience</a></li>
+          <li class="nav-item"><a class="nav-link active" href="education.html"><i class="bi bi-mortarboard me-1"></i>Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="skill.html"><i class="bi bi-tools me-1"></i>Skill</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5" id="eduContainer">
+    <h2 class="fw-bold mb-4">Education</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card edu-card uitm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="image/uitm-vector-logo-400x400.jpg" alt="UiTM" class="me-3" width="64" height="64" style="border-radius:12px;" />
+              <div>
+                <h5 class="mb-0">Universiti Teknologi MARA (UiTM)</h5>
+                <small class="text-muted">Bachelor of Information Science (Hons) Information Systems Management</small><br>
+                <span class="badge bg-primary">2024 - Present</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm toggle-detail">View More</button>
+            <div class="edu-detail mt-3">
+              <ul>
+                <li> CGPA: 3.35</li>
+                <li>Member, Data & Innovation Club</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card edu-card smk-dsa">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="image/smkdsa.jpg" alt="SMK DSA" class="me-3" width="64" height="64" style="border-radius:12px;" />
+              <div>
+                <h5 class="mb-0">SMK Datuk Syed Ahmad</h5>
+                <small class="text-muted">STPM - Science Stream</small><br>
+                <span class="badge bg-secondary">2022 - 2024</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm toggle-detail">View More</button>
+            <div class="edu-detail mt-3">
+              <ul>
+                <li>President, BSMM Club</li>
+                <li>Organised STPM Motivation Camp 2023 at Gopeng Campsite, Perak</li>
+                <li>CGPA: 3.50</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card edu-card smka">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="image/SMUK.jpg" alt="SMKA" class="me-3" width="64" height="64" style="border-radius:12px;" />
+              <div>
+                <h5 class="mb-0">SM Agama Al-Khairiah</h5>
+                <small class="text-muted">PT3 & SPM</small><br>
+                <span class="badge bg-secondary">2017 - 2022</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm toggle-detail">View More</button>
+            <div class="edu-detail mt-3">
+              <ul>
+                <li>Prefect (2018–2022)</li>
+                <li>Participant, State-level Debate (SPM Year)</li>
+                <li>SPM Result: 4A</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <small>&copy; 2025 Syahira Othman. All rights reserved.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.toggle-detail').forEach(button => {
+      button.addEventListener('click', () => {
+        const detail = button.nextElementSibling;
+        if (detail.style.maxHeight) {
+          detail.style.maxHeight = null;
+          detail.style.opacity = 0;
+          button.textContent = 'View More';
+        } else {
+          detail.style.maxHeight = detail.scrollHeight + 'px';
+          detail.style.opacity = 1;
+          button.textContent = 'Hide';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
